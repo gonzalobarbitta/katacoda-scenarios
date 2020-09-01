@@ -6,12 +6,21 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
-        "text": "step1.md"
+        "title": "kubectl basics",
+        "text": "step1.md",
+        "code": "foreground.sh"
       },
       {
-        "title": "Step 2",
+        "title": "Install flux",
         "text": "step2.md"
+      },
+      {
+        "title": "Sync cluster with Git repository",
+        "text": "step3.md"
+      },
+      {
+        "title": "Automated deployment of new container images",
+        "text": "step4.md"
       }
     ],
     "intro": {
@@ -25,6 +34,7 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "golang:1.14"
+		"port": 30000,
+		"dockerimage": "minikube-running"
   }
 }
