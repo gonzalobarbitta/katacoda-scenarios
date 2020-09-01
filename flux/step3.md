@@ -4,10 +4,10 @@ In order to sync, you need to give flux write access to the repository. At start
 
 `fluxctl identity --k8s-fwd-ns flux`{{execute}}
 
-Now, create a deploy key on your GitHub repository. Make sure you check ***Allow write access**.
+Now, create a deploy key on your GitHub repository. Make sure you check **Allow write access**.
 
 By default, Flux git pull frequency is set to 5 minutes. However, you can tell flux to sync the changes immediately with:
 
 `fluxctl sync --k8s-fwd-ns flux`{{execute}}
 
-If you now run `fluxctl get pods -n cloud-training`{{execute}} you can see pods are starting.
+If you now run `kubectl get pods -n cloud-training`{{execute}} you can see pods are starting.

@@ -9,7 +9,8 @@ Once forked, replace `GHUSER` with your username, and run the command:
 `export GHUSER="gonzalobarbitta"`
 
 Then, install flux in your cluster:
- 
+
+```
 fluxctl install \
 --git-user=${GHUSER} \
 --git-email=${GHUSER}@users.noreply.github.com \
