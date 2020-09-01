@@ -17,10 +17,6 @@
       {
         "title": "Sync cluster with Git repository",
         "text": "step3.md"
-      },
-      {
-        "title": "Automated deployment of new container images",
-        "text": "step4.md"
       }
     ],
     "intro": {

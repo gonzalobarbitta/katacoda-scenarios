@@ -2,10 +2,14 @@ Create the flux namespace:
 
 `kubectl create ns flux`{{execute}}
 
-Install flux:
+Since you will need to create a deploy key flux to work, if you haven't done it already, please fork [this repository](https://github.com/gonzalobarbitta/flux-training) on GitHub.
 
-```
-export GHUSER="gonzalobarbitta"
+Once forked, replace `GHUSER` with your username, and run the command:
+
+`export GHUSER="gonzalobarbitta"`
+
+Then, install flux in your cluster:
+ 
 fluxctl install \
 --git-user=${GHUSER} \
 --git-email=${GHUSER}@users.noreply.github.com \
@@ -13,3 +17,7 @@ fluxctl install \
 --git-path=workloads \
 --namespace=flux | kubectl apply -f -
 ```{{execute}}
+
+Wait for Flux to start:
+
+`kubectl -n flux rollout status deployment/flux`{{execute}}
